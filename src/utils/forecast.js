@@ -13,7 +13,8 @@ const foreCast = (latitude, longitude, callback) => {
             callback(undefined, {
                 foreCastSummary: responseBody.daily.data[0].summary +
                     ' It is currently ' + responseBody.currently.temperature + ' degrees out. There is ' +
-                    responseBody.currently.precipProbability + '% chance of rain'
+                    responseBody.currently.precipProbability + '% chance of rain & minimum temperature is ' +
+                    responseBody.daily.data[0].temperatureMin
             })
         }
     })
